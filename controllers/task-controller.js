@@ -3,8 +3,9 @@ import taskService from "../services/task-service.js";
 class TaskController {
   async getAllTasks(req, res) {
     try {
-      const response = await taskService.getAllTasks();
-      return res.send(response).status(200);
+      const tasks = await taskService.getAllTasks();
+      return res.render("index", { tasks });
+      // .send(response).status(200);
     } catch (error) {
       return res.status(200).send(error);
     }

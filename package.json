@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "node app.js",
-    "dev": "npx nodemon app.js",
+    "dev": "nodemon app.js",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --passWithNoTests",
     "prettier": "prettier --write \"./**/*.{js,ts,json,mjs}\"",
     "lint": "eslint . --ignore-pattern \"tests/*\" \"**/*.js\""
@@ -16,6 +16,7 @@
   "description": "",
   "dependencies": {
     "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
     "express": "^4.19.2",
     "morgan": "^1.10.0",
     "uuid": "^10.0.0"
