@@ -1,0 +1,41 @@
+.allTasks {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem;
+}
+
+.card {
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.buttonsRow {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.buttonsRow button {
+    padding: 0.3rem;
+    border: 1px solid black ;
+    border-radius: 0.5rem;
+    color: white;
+}
+
+.updateButton {
+    background-color: dodgerblue;
+}
+
+.updateButton a {
+    text-decoration: none;
+    color: white;
+}
+
+.deleteButton {
+    background-color: red;
+}

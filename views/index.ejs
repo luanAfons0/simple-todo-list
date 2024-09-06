@@ -8,6 +8,11 @@
 </head>
 <body>
     <%- include('components/header.ejs'); %>
+        <% if(tasks.length == 0){ %>
+            <%- include('components/emptyTasks.ejs'); %>
+        <% } else { %>
+            <%- include('components/allTasks.ejs'), { tasks } %>
+        <% } %>
     <%- include('components/footer.ejs'); %>
 </body>
 </html>
