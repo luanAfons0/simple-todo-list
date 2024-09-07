@@ -1,10 +1,10 @@
 import taskService from "../services/task-service.js";
 
-class TaskController {
+class FrontEndController {
   async getAllTasks(req, res) {
     try {
       const tasks = await taskService.getAllTasks();
-      return res.status(200).send({ tasks: tasks });
+      return res.render("index", { tasks });
     } catch (error) {
       return res.status(200).send(error);
     }
@@ -12,13 +12,19 @@ class TaskController {
 
   async createTask(req, res) {
     try {
-      const newTask = req.body;
-      const response = await taskService.createTask(newTask);
-      return res.status(200).send(response);
+      return res.render("create-task");
+    } catch (error) {
+      return res.status(500).send({ message: error.message });
+    }
+  }
+
+  async updateTask(req, res) {
+    try {
+      return res.render("update-task");
     } catch (error) {
       return res.status(500).send({ message: error.message });
     }
   }
 }
 
-export default new TaskController();
+export default new FrontEndController();

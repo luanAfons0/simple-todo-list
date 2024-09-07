@@ -12,7 +12,7 @@ app.use(routes);
 
 // View engine setup
 app.set("view engine", "ejs");
-app.use(express.static('./public'));
+app.use(express.static("./public"));
 
 // Server start
 app.listen(process.env.PORT, () => {
