@@ -4,15 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/globals.css" type="text/css">
-    <title>All tasks</title>
+    <title>Create task</title>
 </head>
 <body>
-    <%- include('components/header.ejs') %>
-        <% if(tasks.length == 0){ %>
-            <%- include('components/emptyTasks.ejs'); %>
-        <% } else { %>
-            <%- include('components/allTasks.ejs'), { tasks } %>
-        <% } %>
+    <%- include('components/header.ejs'); %>
+    <%- include('components/create-task-form.ejs'); %>    
     <%- include('components/footer.ejs'); %>
 </body>
 </html>

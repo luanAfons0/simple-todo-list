@@ -6,7 +6,7 @@ class TaskController {
       const tasks = await taskService.getAllTasks();
       return res.status(200).send({ tasks: tasks });
     } catch (error) {
-      return res.status(200).send(error);
+      return res.status(500).send(error);
     }
   }
 

@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="css/create-task-form.css">
+<script src="js/create-task-form.js"></script>
+<div class="create-task-form">
+   <div id="form">
+      <div>
+         <label for="title">Title <span>*</span></label>
+         <input id="title" type="text">
+         <span class="error-message"></span>
+      </div>
+      <div>
+         <label for="description">Description <span>*</span></label>
+         <textarea id="description"></textarea>
+         <span class="error-description"></span>
+      </div>
+      <div>
+         <label for="status">Status <span>*</span></label>
+         <select name="status" id="status">
+            <option value="Todo" selected>Todo</option>
+            <option value="Done">Done</option>
+         </select>
+      </div>
+      <button onclick="onSubmit()" id="submit">Submit</button>
+   </div>
+</div>
