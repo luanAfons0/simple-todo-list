@@ -2,9 +2,9 @@
 <div class="allTasks">
     <% for(var i=0; i < tasks.length; i++) { %>
         <div class="card">
-            <h1>Title: <%= tasks[i].title %></h1>
-            <h1>Description: <%= tasks[i].description %></h1>
-            <h1>Status: <%= tasks[i].status %></h1>
+            <h1><span>Title:</span> <%= tasks[i].title %></h1>
+            <h1><span>Status:</span> <%= tasks[i].status %></h1>
+            <h1><span>Description:</span> <%= tasks[i].description %></h1>
             <div class="buttonsRow">
                 <Button class="updateButton"><a href=<%= "/update-tasks?id=" + tasks[i].id %>>Update task</a></Button>
                 <Button class="deleteButton">Delete</Button>
