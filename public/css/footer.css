@@ -83,4 +83,8 @@
       line-height: 1.8;
     }
   }
-  
+
+  img{
+    max-width: 35px;
+    max-height: 35px;
+  }
