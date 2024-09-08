@@ -8,13 +8,13 @@ const taskRoutes = express.Router();
 taskRoutes
   .get("/get-all-tasks", taskController.getAllTasks)
   .post("/task", taskController.createTask)
-  .put("/task/:id")
+  .patch("/task/:id", taskController.updateTask)
   .delete("/task/:id", taskController.deleteTask);
 
 // Front-end/render routes
 taskRoutes
   .get("/", frontEndController.getAllTasks)
   .get("/create-task", frontEndController.createTask)
-  .get("/update-task", frontEndController.updateTask);
+  .get("/update-task/:id", frontEndController.updateTask);
 
 export default taskRoutes;

@@ -7,7 +7,7 @@
             <h1><span>Status:</span> <%= tasks[i].status %></h1>
             <h1><span>Description:</span> <%= tasks[i].description %></h1>
             <div class="buttonsRow">
-                <Button class="updateButton"><a href=<%= "/update-tasks?id=" + tasks[i].id %>>Update task</a></Button>
+                <Button class="updateButton"><a href=<%= "/update-task/" + tasks[i].id %>>Update task</a></Button>
                 <Button id=<%= tasks[i].id %> class="deleteButton" onclick="deleteTask(event)">Delete</Button>
             </div>
         </div>

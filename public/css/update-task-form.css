@@ -1,0 +1,53 @@
+.update-task-form {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#form {
+  background-color: #fff;
+  border: solid 1px lightgrey;
+  border-radius: 5px;
+  padding: 30px 15px;
+  width: 600px;
+  margin: 50px auto 0;
+}
+
+#form > div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+label span {
+  color: red;
+}
+
+input, textarea {
+  border: solid 1px lightgray;
+  border-radius: 5px;
+  padding: 10px 20px 10px 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+select {
+  padding: 0.5rem;
+  width: 10rem;
+}
+
+#submit {
+  padding: 1rem;
+  border-radius: 12px;
+  width: 100%;
+  background-color: green;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}

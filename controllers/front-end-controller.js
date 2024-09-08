@@ -4,7 +4,7 @@ class FrontEndController {
   async getAllTasks(req, res) {
     try {
       const tasks = await taskService.getAllTasks();
-      return res.render("index", { tasks });
+      return res.render("all-tasks", { tasks });
     } catch (error) {
       return res.status(200).send(error);
     }

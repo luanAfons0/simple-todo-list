@@ -39,6 +39,30 @@ class TaskRepository {
 
     return response;
   }
+
+  async updateTask(taskId, updatedTask) {
+    const exinstingTask = dataBase.tasks.filter((task) => {
+      if (task.id == taskId) {
+        return task;
+      }
+    });
+
+    if (!exinstingTask) {
+      throw new Error("Task dont exist!");
+    }
+
+    const response = (dataBase.tasks = dataBase.tasks.map((task) => {
+      if (task.id == taskId) {
+        return {
+          ...updatedTask,
+          id: taskId
+        }
+      }
+      return task;
+    }))
+
+    return response
+  }
 }
 
 export default new TaskRepository();

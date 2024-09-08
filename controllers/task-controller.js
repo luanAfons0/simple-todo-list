@@ -29,6 +29,17 @@ class TaskController {
       return res.status(500).send({ message: error.message });
     }
   }
+
+  async updateTask(req, res) {
+    try {
+      const taskId = req.params.id;
+      const updatedTask = req.body
+      const response = await taskService.updateTask(taskId, updatedTask);
+      return res.status(200).send(response);
+    } catch (error) {
+      return res.status(500).send({ message: error.message });
+    }
+  }
 }
 
 export default new TaskController();
