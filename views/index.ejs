@@ -9,9 +9,9 @@
 <body>
     <%- include('components/header.ejs') %>
         <% if(tasks.length == 0){ %>
-            <%- include('components/emptyTasks.ejs'); %>
+            <%- include('components/empty-tasks.ejs'); %>
         <% } else { %>
-            <%- include('components/allTasks.ejs'), { tasks } %>
+            <%- include('components/all-tasks.ejs'), { tasks } %>
         <% } %>
     <%- include('components/footer.ejs'); %>
 </body>

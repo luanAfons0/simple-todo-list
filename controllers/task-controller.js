@@ -22,7 +22,7 @@ class TaskController {
 
   async deleteTask(req, res) {
     try {
-      const taskId = req.params.id
+      const taskId = req.params.id;
       const response = await taskService.deleteTask(taskId);
       return res.status(200).send(response);
     } catch (error) {

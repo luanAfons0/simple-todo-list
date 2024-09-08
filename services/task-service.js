@@ -25,19 +25,19 @@ class TaskRepository {
       if (task.id == taskId) {
         return task;
       }
-    })
+    });
 
     if (!exinstingTask) {
       throw new Error("Task dont exist!");
     }
 
-    const response = dataBase.tasks = dataBase.tasks.filter((task) => {
+    const response = (dataBase.tasks = dataBase.tasks.filter((task) => {
       if (task.id != taskId) {
-        return task
+        return task;
       }
-    })
+    }));
 
-    return response
+    return response;
   }
 }
 
