@@ -19,6 +19,16 @@ class TaskController {
       return res.status(500).send({ message: error.message });
     }
   }
+
+  async deleteTask(req, res) {
+    try {
+      const taskId = req.params.id
+      const response = await taskService.deleteTask(taskId);
+      return res.status(200).send(response);
+    } catch (error) {
+      return res.status(500).send({ message: error.message });
+    }
+  }
 }
 
 export default new TaskController();

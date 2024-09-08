@@ -19,6 +19,26 @@ class TaskRepository {
 
     return response;
   }
+
+  async deleteTask(taskId) {
+    const exinstingTask = dataBase.tasks.filter((task) => {
+      if (task.id == taskId) {
+        return task;
+      }
+    })
+
+    if (!exinstingTask) {
+      throw new Error("Task dont exist!");
+    }
+
+    const response = dataBase.tasks = dataBase.tasks.filter((task) => {
+      if (task.id != taskId) {
+        return task
+      }
+    })
+
+    return response
+  }
 }
 
 export default new TaskRepository();

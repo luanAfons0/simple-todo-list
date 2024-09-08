@@ -9,7 +9,7 @@ taskRoutes
   .get("/get-all-tasks", taskController.getAllTasks)
   .post("/task", taskController.createTask)
   .put("/task/:id")
-  .delete("task/:id");
+  .delete("/task/:id", taskController.deleteTask);
 
 // Front-end/render routes
 taskRoutes

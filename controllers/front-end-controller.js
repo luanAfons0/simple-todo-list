@@ -12,7 +12,7 @@ class FrontEndController {
 
   async createTask(req, res) {
     try {
-      return res.render("create-task");
+      return res.render("createTask");
     } catch (error) {
       return res.status(500).send({ message: error.message });
     }
