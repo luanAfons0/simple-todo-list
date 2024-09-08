@@ -5,6 +5,7 @@
     align-items: center;
     gap: 3rem;
     padding: 2rem;
+    overflow: hidden;
 }
 
 .card {
@@ -15,6 +16,10 @@
     border-radius: 12px;
     padding: 2rem;
     overflow-wrap: break-word;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 }
 
 .card span {
